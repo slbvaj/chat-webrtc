@@ -1,0 +1,25 @@
+{
+  "name": "chat-webrtc",
+  "version": "1.0.0",
+  "description": "This is a sample chat application using WebRTC. Based on the tutorial at: https://www.youtube.com/watch?v=rxzOqP9YwmM",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slbvaj/chat-webrtc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slbvaj/chat-webrtc/issues"
+  },
+  "homepage": "https://github.com/slbvaj/chat-webrtc#readme",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
