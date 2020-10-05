@@ -10,9 +10,22 @@ body {
     max-width: 1200px;
 }
 
-#messsage-container div {
+#message-container div {
     background-color: #CCC;
     padding: 5px;
+    border: 10px solid #FFF;
+    right: 0px;
+    width: 85;
+    border-radius: 15px;
+    
+}
+
+.messageRight {
+    margin-left: 10%;
+}
+
+.messageLeft {
+    margin-right: 10%;
 }
 
 #message-container dev:nth-child(2n) {

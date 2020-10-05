@@ -1,6 +1,6 @@
 const io = require('socket.io')(3000)
 
-const users = {}
+const users = []
 
 dumpUsers()
 
@@ -41,3 +41,13 @@ function dumpUsers() {
     console.log(users)
 }
 
+function addUser(name) {
+    // check for duplicate
+    var index = users.findIndex(user => {
+        return user.name === name
+    })
+
+    // add user to collection
+
+
+}
