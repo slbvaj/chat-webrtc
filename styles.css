@@ -11,7 +11,7 @@ body {
 }
 
 #message-container div {
-    background-color: #CCC;
+    /* background-color: #CCC; */
     padding: 5px;
     border: 10px solid #FFF;
     right: 0px;
@@ -22,14 +22,22 @@ body {
 
 .messageRight {
     margin-left: 10%;
+    background-color: rgb(65, 121, 194);
+    color: white;
 }
 
 .messageLeft {
     margin-right: 10%;
+    background-color: lightgray;
+    color: black;
+}
+
+.who {
+    font-weight: bold;
 }
 
 #message-container dev:nth-child(2n) {
-    background-color: #FFF;
+    //background-color: #FFF;
 }
 
 #send-container {

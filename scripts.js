@@ -7,19 +7,19 @@ const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
 
 const name = prompt('What is your name?')
-appendMessage('You','joined')
+appendMessage('You','[joined]')
 console.log('Registering new user: '+name)
 socket.emit('connect-user',name)
 
 
 // Register so you can see when OTHER users connect
 socket.on('user-connected', name => {
-    appendMessage(`${name}`, 'connected')
+    appendMessage(`${name}`, '[connected]')
  })
 
  // Register so you can see when OTHER users disconnect
 socket.on('user-disconnected', name => {
-    appendMessage(`${name}`, 'disconnected')
+    appendMessage(`${name}`, '[disconnected]')
  })
  
  // Register for OTHER  users's chat messages
@@ -44,10 +44,18 @@ messageForm.addEventListener('submit', e=> {
 function appendMessage(who, message) {
     const messageElement = document.createElement('div')
     if ("You" === who) {
-        messageElement.className = "messageLeft"
-    } else {
         messageElement.className = "messageRight"
+    } else {
+        messageElement.className = "messageLeft"
     }
-    messageElement.innerText = `${who}: ${message}`
+    const whoElement = document.createElement('span')
+    whoElement.className = 'who'
+    whoElement.innerText = `${who}: `;
+    messageElement.append(whoElement)
+
+    const messageContentElement = document.createElement('span')
+    messageContentElement.innerText = message;
+    messageElement.append(messageContentElement)
+
     messageContainer.append(messageElement)
 }
