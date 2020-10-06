@@ -36,10 +36,6 @@ body {
     font-weight: bold;
 }
 
-#message-container dev:nth-child(2n) {
-    //background-color: #FFF;
-}
-
 #send-container {
     position:fixed;
     padding-bottom: 30px;
